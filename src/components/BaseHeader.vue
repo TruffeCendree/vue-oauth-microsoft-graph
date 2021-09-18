@@ -1,18 +1,24 @@
 <template>
   <header class="base-header">
     <div class="header-content">
-      <font-awesome-icon class="icon" :icon="['fas', 'home']" /> Home
+      <base-button>
+        <font-awesome-icon class="icon" :icon="['fas', 'home']" /> Home
+      </base-button>
 
       <div class="separator" />
 
-      <font-awesome-icon class="icon" :icon="['fas', 'user']" /> Not yet logged in
+      <base-button>
+        <font-awesome-icon class="icon" :icon="['fas', 'user']" /> Not yet logged in
+      </base-button>
     </div>
   </header>
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue'
 export default {
-  name: 'BaseHeader'
+  name: 'BaseHeader',
+  components: { BaseButton }
 }
 </script>
 
