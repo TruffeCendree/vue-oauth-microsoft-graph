@@ -1,11 +1,11 @@
 <template>
   <header class="base-header">
     <div class="header-content">
-      Home
+      <font-awesome-icon class="icon" :icon="['fas', 'home']" /> Home
 
       <div class="separator" />
 
-      Not yet logged in
+      <font-awesome-icon class="icon" :icon="['fas', 'user']" /> Not yet logged in
     </div>
   </header>
 </template>
@@ -30,5 +30,9 @@ export default {
 
 .separator {
   flex-grow: 1;
+}
+
+.icon {
+  margin-right: 0.5em;
 }
 </style>
