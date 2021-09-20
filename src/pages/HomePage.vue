@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import BaseButton from './BaseButton.vue'
+import BaseButton from '../components/BaseButton.vue'
 export default {
-  components: { BaseButton },
-  name: 'HomePage'
+  name: 'HomePage',
+  components: { BaseButton }
 }
 </script>
