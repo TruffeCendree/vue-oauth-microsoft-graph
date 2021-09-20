@@ -2,17 +2,22 @@
   <div style="text-align: center">
     <p>Here comes the content of the HomePage.</p>
 
-    <p><base-button>BaseButton</base-button></p>
-    <p><base-button disabled>BaseButton disabled</base-button></p>
-    <p><base-button color="warn">BaseButton warn color</base-button></p>
-    <p><base-button color="danger">BaseButton danger color</base-button></p>
+    <async-button @click="wait2Seconds">
+      Disabled and animated for 2 seconds if clicked
+    </async-button>
   </div>
 </template>
 
 <script>
-import BaseButton from '../components/BaseButton.vue'
+import AsyncButton from '../components/AsyncButton.vue'
+
 export default {
   name: 'HomePage',
-  components: { BaseButton }
+  components: { AsyncButton },
+  methods: {
+    wait2Seconds () {
+      return new Promise(resolve => setTimeout(resolve, 2000))
+    }
+  }
 }
 </script>
